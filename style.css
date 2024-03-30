@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root{
+
+/* COLORS */
+
+/* Primary */
+
+--Light-red: hsl(356, 100%, 66%); /*(CTA text)*/
+--Very-light-red: hsl(355, 100%, 74%); /*(CTA hover background)*/
+--Very-dark-blue: hsl(208, 49%, 24%); /*(headings)*/
+
+/* Neutral */
+
+--White: hsl(0, 0%, 100%); /*(text)*/
+--Grayish-blue: hsl(240, 2%, 79%); /*(footer text)*/
+--Very-dark-grayish-blue: hsl(207, 13%, 34%); /*(body copy)*/
+--Very-dark-black-blue: hsl(240, 10%, 16%); /*(footer background)*/
+
+/* Gradient
+Background gradient - Intro/CTA mobile nav: */
+
+--Very-light-red: hsl(13, 100%, 72%);
+--Light-red: hsl(353, 100%, 62%);
+
+/* Background gradient - body: */
+
+--Very-dark-gray-blue: hsl(237, 17%, 21%);
+--Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+/* FONTS */
+
+--primary-font: "Ubuntu",sans-serif;
+--secondary-font: "Overpass",sans-serif;
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: var(--primary-font);
+}
+
+h1,h2,h3,h4{
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    color: var(--White);
+}
+
+h1{
+    font-size: 3.5em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+h4{
+    font-size: 1.1em;
+}
+
+p{
+    color: var(--Very-dark-grayish-blue);
+}
+
+button{
+    font-size: .8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.outline-btn{
+    border: 2px solid var(--White);
+    background-color: transparent;
+    padding: .8em 1.5em;
+    border-radius: 30em;
+    color: var(--White);
+}
+
+.outline-btn:hover{
+    background-color: var(--White);
+    color: var(--Light-red);
+}
+
+.solid-btn{
+    border: 2px solid var(--White);
+    background-color: var(--White);
+    padding: .8em 1.5em;
+    border-radius: 30em;
+    color: var(--Light-red);
+}
+
+.solid-btn:hover{
+    border: 2px solid var(--Very-light-red);
+    background-color: var(--Very-light-red);
+    color: var(--White);
+}
+
+.link-btn{
+    border: none;
+    background-color: transparent;
+    padding: .8em 1.5em;
+    border-radius: 30em;
+    color: var(--White);
+}
+.lg-btn {
+    padding: 1em 2em;
+    font-size: 1.1em;
+}
+
+a{
+    color: var(--White);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+li{
+    list-style-type: none;
+}
+
+.bi{
+    margin-left: .1em;
+    font-size: 12px;
+}
+
+.container{
+    max-width: 75em;
+    margin-inline: auto;
+    padding-inline: 2.5em;
+}
+
+
+
+/*------------HERO styling-------------*/
+.hero{
+    background-image: linear-gradient(to bottom right, var(--Very-light-red), var(--Light-red));
+    padding-top: 2.5em;
+    padding-bottom: 6em;
+    position: relative;
+    /* z-index: -2; */
+}
+
+/* trying to incorporate the background with a psudo element */
+
+/* .hero::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-image: url(images/bg-pattern-intro-desktop.svg);
+    background-position: center;
+    background-size: cover;
+} */
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    z-index: 1;
+}
+
+.hero nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero ul{
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    z-index: 1;
+}
+
+.banner{
+    height: 60vh;
+    display: grid;
+    place-content: center;
+    gap: 2em;
+    text-align: center;
+}
+
+.banner p{
+    color: var(--White);
+    font-size: 1.2em;
+}
+
+.banner .cta{
+    display: flex;
+    place-content: center;
+    gap: 1em;
+}
